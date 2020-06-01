@@ -7,15 +7,19 @@ var currentWordIndex = sightWords.length - 1;
 // set initial sight word
 document.querySelector('.sightWord').innerHTML = `${sightWords[currentWordIndex]}.`;
 
-// prevents highlighting of sight word if user clicks quickly (double-clicks)
-document.querySelector('.sightWord').addEventListener('mousedown', function (event) {
-  if (event.detail > 1) {
-    event.preventDefault();
-  }
-}, false);
+// on each click of prev, display prev word
+document.querySelector('#prev').addEventListener('click', function () {
+  currentWordIndex--;
 
-// on each click of sight word, display new word
-document.querySelector('.sightWord').addEventListener('click', function () {
+  if (currentWordIndex < 0) {
+    currentWordIndex = sightWords.length - 1;
+  }
+
+  document.querySelector('.sightWord').innerHTML = `${sightWords[currentWordIndex]}.`;
+});
+
+// on each click of next, display next word
+document.querySelector('#next').addEventListener('click', function () {
   currentWordIndex++;
 
   if (currentWordIndex >= sightWords.length) {

@@ -52,6 +52,10 @@ p {
   text-decoration: underline;
 }
 
+.sightWord:hover {
+  cursor: pointer;
+}
+
 .spacer {
   display: inline-block;
   height: 30px;
@@ -60,7 +64,6 @@ p {
 
 /************************** ID SELECTORS *************************/
 #logo {
-  border-radius: 50%;
   left: 5px;
   position: absolute;
   top: -10px;

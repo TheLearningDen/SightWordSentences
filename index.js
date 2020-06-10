@@ -64,3 +64,10 @@ function playSound(word) {
   let audio = new Audio(`audio/${word}.mp3`);
   audio.play();
 }
+
+// prevents highlighting of sight word if user clicks quickly (double-clicks)
+document.querySelector('.sightWord').addEventListener('mousedown', function (event) {
+  if (event.detail > 1) {
+    event.preventDefault();
+  }
+}, false);

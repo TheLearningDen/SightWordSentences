@@ -4,8 +4,16 @@
 var sightWords = ['dog', 'car', 'fish', 'ball', 'cat', 'plane', 'books'];
 var currentWordIndex = sightWords.length - 1;
 
-// set initial sight word
+// set initial sight word and play audio
 document.querySelector('.sightWord').innerHTML = `${sightWords[currentWordIndex]}.`;
+
+setTimeout(function () {
+  playSound('iLikeMy');
+}, 300);
+
+setTimeout(function () {
+  playSound(sightWords[currentWordIndex]);
+}, 1850);
 
 // on each click of prev, display previous word
 document.querySelector('#prev').addEventListener('click', function () {

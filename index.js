@@ -1,5 +1,7 @@
 // jshint esversion: 6
 
+/* Copyright (c) 2020 The Learning Den */
+
 // variables
 var sightWords = ['dog', 'car', 'fish', 'ball', 'cat', 'plane', 'books'];
 var currentWordIndex = sightWords.length - 1;

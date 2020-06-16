@@ -37,12 +37,12 @@ document.querySelector('.sightWord').addEventListener('click', function () {
 // various keydown events
 document.addEventListener('keydown', function (event) {
   // same as down arrow click
-  if (event.key === 'ArrowRight') {
+  if (event.key === 'ArrowDown') {
     nextWord();
   }
 
   // same as up arrow click
-  if (event.key === 'ArrowLeft') {
+  if (event.key === 'ArrowUp') {
     prevWord();
   }
 
